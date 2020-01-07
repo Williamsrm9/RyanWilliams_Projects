@@ -1,1 +1,299 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+
+namespace Ryan_Williams_Final_Question1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            while (true)
+            {
+
+
+                int[] WARArray = new int[7];
+                int[] BUCArray = new int[7];
+                int[] GAMEArray = new int[14];
+                int w = 0;
+                int b = 0;
+
+
+                Random ranGen = new Random();
+                int scoreWAR = ranGen.Next(80, 140);
+                int scoreBUC = ranGen.Next(75, 145);
+
+                if (w < 4 && b < 4)
+                {
+                    WriteLine("The score of Game 1 was:");
+                    WriteLine("Warriors: " + scoreWAR);
+
+                    WARArray[0] = scoreWAR;
+                    WriteLine("Raptors: " + scoreBUC);
+                    BUCArray[0] = scoreBUC;
+
+                    if (scoreWAR > scoreBUC)
+                    {
+                        WriteLine("The Warriors won Game 1.");
+                        GAMEArray[0] = scoreWAR;
+                        w++;
+
+                    }
+                    else
+                    {
+                        WriteLine("The Raptors won Game 1.");
+                        GAMEArray[1] = scoreBUC;
+                        b++;
+
+                    }
+
+                    WriteLine("");
+                    scoreWAR = ranGen.Next(80, 140);
+                    scoreBUC = ranGen.Next(75, 145);
+
+                    WriteLine("The score of Game 2 was:");
+                    WriteLine("Warriors: " + scoreWAR);
+                    WARArray[1] = scoreWAR;
+
+                    WriteLine("Raptors: " + scoreBUC);
+                    BUCArray[1] = scoreBUC;
+
+                    if (scoreWAR > scoreBUC)
+                    {
+                        WriteLine("The Warriors won Game 2.");
+                        GAMEArray[2] = scoreWAR;
+                        w++;
+                    }
+                    else
+                    {
+                        WriteLine("The Raptors won Game 2.");
+                        GAMEArray[3] = scoreBUC;
+                        b++;
+                    }
+
+                    WriteLine("");
+                    scoreWAR = ranGen.Next(80, 140);
+                    scoreBUC = ranGen.Next(75, 145);
+
+                    WriteLine("The score of Game 3 was:");
+                    WriteLine("Warriors: " + scoreWAR);
+                    WARArray[2] = scoreWAR;
+
+                    WriteLine("Raptors: " + scoreBUC);
+                    BUCArray[2] = scoreBUC;
+
+                    if (scoreWAR > scoreBUC)
+                    {
+                        WriteLine("The Warriors won Game 3.");
+                        GAMEArray[4] = scoreWAR;
+                        w++;
+                    }
+                    else
+                    {
+                        WriteLine("The Raptors won Game 3.");
+                        GAMEArray[5] = scoreBUC;
+                        b++;
+                    }
+
+                    WriteLine("");
+                    scoreWAR = ranGen.Next(80, 140);
+                    scoreBUC = ranGen.Next(75, 145);
+
+                    WriteLine("The score of Game 4 was:");
+                    WriteLine("Warriors: " + scoreWAR);
+                    WARArray[3] = scoreWAR;
+
+                    WriteLine("Raptors: " + scoreBUC);
+                    BUCArray[3] = scoreBUC;
+
+                    if (scoreWAR > scoreBUC)
+                    {
+                        WriteLine("The Warriors won Game 4.");
+                        GAMEArray[6] = scoreWAR;
+                        w++;
+                    }
+                    else
+                    {
+                        WriteLine("The Raptors won Game 4.");
+                        GAMEArray[7] = scoreBUC;
+                        b++;
+                    }
+
+                }
+
+                if (w < 4 && b < 4)
+                {
+
+                    WriteLine("");
+                    scoreWAR = ranGen.Next(80, 140);
+                    scoreBUC = ranGen.Next(75, 145);
+
+                    WriteLine("The score of Game 5 was:");
+                    WriteLine("Warriors: " + scoreWAR);
+                    WARArray[4] = scoreWAR;
+
+                    WriteLine("Raptors: " + scoreBUC);
+                    BUCArray[4] = scoreBUC;
+
+                    if (scoreWAR > scoreBUC)
+                    {
+                        WriteLine("The Warriors won Game 5.");
+                        GAMEArray[8] = scoreWAR;
+                        w++;
+                    }
+                    else
+                    {
+                        WriteLine("The Raptors won Game 5.");
+                        GAMEArray[9] = scoreBUC;
+                        b++;
+                    }
+                }
+                if (w < 4 && b < 4)
+                {
+
+                    WriteLine("");
+                    scoreWAR = ranGen.Next(80, 140);
+                    scoreBUC = ranGen.Next(75, 145);
+
+                    WriteLine("The score of Game 6 was:");
+                    WriteLine("Warriors: " + scoreWAR);
+                    WARArray[5] = scoreWAR;
+
+                    WriteLine("Raptors: " + scoreBUC);
+                    BUCArray[5] = scoreBUC;
+
+                    if (scoreWAR > scoreBUC)
+                    {
+                        WriteLine("The Warriors won Game 6.");
+                        GAMEArray[10] = scoreWAR;
+                        w++;
+                    }
+                    else
+                    {
+                        WriteLine("The Raptors won Game 6.");
+                        GAMEArray[11] = scoreBUC;
+                        b++;
+                    }
+                }
+                if (w < 4 && b < 4)
+                {
+
+                    WriteLine("");
+                    scoreWAR = ranGen.Next(80, 140);
+                    scoreBUC = ranGen.Next(75, 145);
+
+                    WriteLine("The score of Game 7 was:");
+                    WriteLine("Warriors: " + scoreWAR);
+                    WARArray[6] = scoreWAR;
+
+                    WriteLine("Raptors: " + scoreBUC);
+                    BUCArray[6] = scoreBUC;
+
+                    if (scoreWAR > scoreBUC)
+                    {
+                        WriteLine("The Warriors won Game 7.");
+                        GAMEArray[12] = scoreWAR;
+                        w++;
+                    }
+                    else
+                    {
+                        WriteLine("The Raptors won Game 7.");
+                        GAMEArray[13] = scoreBUC;
+                        b++;
+                    }
+                }
+
+
+                WriteLine("");
+                if (w == 4)
+                {
+                    WriteLine("The Warriors have won the championship!");
+                }
+                if (b == 4)
+                {
+                    WriteLine("The Raptors have won the championship!");
+                }
+
+                WriteLine("");
+                WriteLine("Series Summary:");
+                WriteLine("");
+
+                if (GAMEArray[0] > GAMEArray[1])
+                {
+                    WriteLine("The Warriors won Game 1.");
+                }
+                else
+                {
+                    WriteLine("The Raptors won Game 1.");
+                }
+                if (GAMEArray[2] > GAMEArray[3])
+                {
+                    WriteLine("The Warriors won Game 2.");
+                }
+                else
+                {
+                    WriteLine("The Raptors won Game 2.");
+                }
+                if (GAMEArray[4] > GAMEArray[5])
+                {
+                    WriteLine("The Warriors won Game 3.");
+                }
+                else
+                {
+                    WriteLine("The Raptors won Game 3.");
+                }
+                if (GAMEArray[6] > GAMEArray[7])
+                {
+                    WriteLine("The Warriors won Game 4.");
+                }
+                if (GAMEArray[7] > GAMEArray[6] || (GAMEArray[7] == GAMEArray[6] && GAMEArray[7] > 0))
+                {
+                    WriteLine("The Raptors won Game 4.");
+                }
+                if (GAMEArray[8] > GAMEArray[9])
+                {
+                    WriteLine("The Warriors won Game 5.");
+                }
+                if (GAMEArray[9] > GAMEArray[8] || (GAMEArray[9] == GAMEArray[8] && GAMEArray[9] > 0))
+                {
+                    WriteLine("The Raptors won Game 5.");
+                }
+                if (GAMEArray[10] > GAMEArray[11])
+                {
+                    WriteLine("The Warriors won Game 6.");
+                }
+                if (GAMEArray[11] > GAMEArray[10] || (GAMEArray[11] == GAMEArray[10] && GAMEArray[11] > 0))
+                {
+                    WriteLine("The Raptors won Game 6.");
+                }
+                if (GAMEArray[12] > GAMEArray[13])
+                {
+                    WriteLine("The Warriors won Game 7.");
+                }
+                if (GAMEArray[13] > GAMEArray[12] || (GAMEArray[13] == GAMEArray[12] && GAMEArray[13] > 0))
+                {
+                    WriteLine("The Raptors won Game 7.");
+                }
+
+
+
+                WriteLine("");
+                WriteLine("Would you like to simulate the NBA championship again? [Y or N?]");
+                string input;
+                input = ReadLine();
+
+                if (input == "N" || input == "n")
+                {
+                    break;
+                }
+            }
+        }
+
+
+
+    }
+}
