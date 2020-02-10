@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace Ryan_Williams_Final_Question1
+namespace Ryan_Williams_NBAfinals_Simulator
 {
     class Program
     {
