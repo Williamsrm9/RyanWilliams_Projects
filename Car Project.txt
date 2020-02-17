@@ -1,0 +1,1619 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace carProjectTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Prompt();
+            Console.ReadKey();
+        }
+        // this is the main prompt it has no parameters or return values 
+        // this method either calls the domestic car prompt or the foregin car prompt
+        public static void Prompt()
+        {
+            string temp;
+            Console.WriteLine("For domestic cars press 1, for foreign cars press 2");
+            temp = Console.ReadLine();
+            if (temp == "1")
+            {
+                DomesticCarPrompt();
+            }
+            else if (temp == "2")
+            {
+                ForeignCarPrompt();
+            }
+
+
+
+
+        }
+        public static void DomesticCarPrompt() //allows selection of type of vehicle you would like
+        {
+            Console.WriteLine("You have selcted domestic cars. ");
+            Console.WriteLine("Next select the catagory of vehicle you would like to configure. For Sedans press 1, for Sports Cars press 2, for Coupes press 3, for SUVs press 4, for Trucks press 5: ");
+            string temp = Console.ReadLine();
+
+
+            if (temp == "1") //input 1 set for sedan
+            {
+                Console.WriteLine("You have selected sedans. For Ford press 1, for Chevrolet press 2, for Dodge press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "Sedan";
+                if (temp == "1")  //selects ford vehicles
+                {
+                    FordPrompt(aCar);
+
+
+                }
+
+
+                else if (temp == "2")  //selects Chevy Vehicles
+                {
+                    ChevyPrompt(aCar);
+                }
+
+
+                else if (temp == "3") // selects Dodge vehicles
+                {
+                    DodgePrompt(aCar);
+                }
+            }
+            else if (temp == "2") //input 2 for sports cars
+            {
+                Console.WriteLine("You have selected Sports cars. For Ford press 1, for Chevrolet press 2, for Dodge press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "Sports car";
+                if (temp == "1")
+                {
+                    FordPrompt(aCar);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    ChevyPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    DodgePrompt(aCar);
+                }
+            }
+            else if (temp == "3") // inputs for Coupes
+            {
+                Console.WriteLine("You have selected Coupes. For Ford press 1, for Chevrolet press 2, for Dodge press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "Coupe";
+                if (temp == "1")
+                {
+                    FordPrompt(aCar);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    ChevyPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    DodgePrompt(aCar);
+                }
+            }
+            else if (temp == "4") // 4 input for SUV
+            {
+                Console.WriteLine("You have selected SUVs. For Ford press 1, for Chevrolet press 2, for Dodge press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "SUV";
+                if (temp == "1")
+                {
+                    FordPrompt(aCar);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    ChevyPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    DodgePrompt(aCar);
+                }
+            }
+            else if (temp == "5") // input 5 for Trucks
+            {
+                Console.WriteLine("You have selected Trucks. For Ford press 1, for Chevrolet press 2, for Dodge press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "Truck";
+                if (temp == "1")
+                {
+                    FordPrompt(aCar);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    ChevyPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    DodgePrompt(aCar);
+                }
+            }
+        }
+
+
+        public static void ForeignCarPrompt() // selects foreign assortment of cars
+        {
+
+
+            Console.WriteLine("You have selcted foreign cars. ");
+            Console.WriteLine("Next select the catagory of vehicle you would like to configure. For Sedans press 1, for Sports Cars press 2, for Coupes press 3, for SUVs press 4: ");
+            string temp = Console.ReadLine();
+
+
+            if (temp == "1")
+            {
+                Console.WriteLine("You have selected sedans. For Kia press 1, for BMW press 2, for Mercedes press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "Sedan";
+                if (temp == "1")
+                {
+                    KiaPrompt(aCar);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    BMWPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    MercedesPrompt(aCar);
+                }
+            }
+
+
+            else if (temp == "2")
+            {
+
+
+                Console.WriteLine("You have selected Sports Cars. For Kia press 1, for BMW press 2, for Mercedes press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "Sport car";
+                if (temp == "1")
+                {
+                    KiaPrompt(aCar);
+                }
+
+
+                else if (temp == "2")
+                {
+                    BMWPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    MercedesPrompt(aCar);
+                }
+
+
+
+
+            }
+
+
+
+
+            else if (temp == "3")
+            {
+
+
+                Console.WriteLine("You have selected coupes. For Kia press 1, for BMW press 2, for Mercedes press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "Coupe";
+                if (temp == "1")
+                {
+                    KiaPrompt(aCar);
+                }
+
+
+                else if (temp == "2")
+                {
+                    BMWPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    MercedesPrompt(aCar);
+                }
+
+
+
+
+            }
+
+
+
+
+            else
+            {
+                Console.WriteLine("You have selected SUVs. For Kia press 1, for BMW press 2, for Mercedes press 3: ");
+                temp = Console.ReadLine();
+                Car aCar = new Car();
+                aCar.CarModel = "SUV";
+                if (temp == "1")
+                {
+                    KiaPrompt(aCar);
+                }
+
+
+                else if (temp == "2")
+                {
+                    BMWPrompt(aCar);
+                }
+
+
+                else if (temp == "3")
+                {
+                    MercedesPrompt(aCar);
+                }
+            }
+
+
+
+
+
+
+        }
+
+
+        /*
+            thid method displays the kia prompt. it accepts a car object and calls the option method 
+        */
+
+
+        public static void KiaPrompt(Car car)
+        {
+            Console.WriteLine("You have selected Kia " + car.CarModel + "s");
+
+
+            if (car.CarModel == "Sedan")
+            {
+                Console.WriteLine("For Kia Rio press 1, for Kia Forte press 2, for Kia Optima press 3");
+                string temp = Console.ReadLine();
+
+
+                if (temp == "1")
+                {
+                    Console.WriteLine("You have selected the Kia Rio");
+                    car.carName = "Kia rio";
+                    car.AddToPrice(15390);
+                    car.Options(car);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    Console.WriteLine("You have selected the Kia Forte.");
+                    car.carName = "Kia forte";
+                    car.AddToPrice(17790);
+                    car.Options(car);
+
+
+                }
+
+
+                else
+                {
+                    Console.WriteLine("You have selected the Kia Optima.");
+                    car.carName = "Kia optima";
+                    car.AddToPrice(22990);
+                    car.Options(car);
+
+
+                }
+            }
+
+
+            else if (car.CarModel == "Sport car")
+            {
+                {
+                    Console.WriteLine("For Kia Rio 5-Door press 1, for Kia Forte5 press 2, for Kia Optima press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the Kia Rio 5-Door");
+                        car.carName = "Kia rio 5-door";
+                        car.AddToPrice(16490);
+                        car.Options(car);
+
+
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the Kia Forte5.");
+                        car.carName = "Kia forte5";
+                        car.AddToPrice(18300);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the Kia k900.");
+                        car.carName = "Kia k900";
+                        car.AddToPrice(59900);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+
+
+            else if (car.CarModel == "Coupe")
+            {
+                {
+                    Console.WriteLine("For Kia Stinger press 1, for Kia Cadenza press 2, for Kia Niro  press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the Kia Stinger");
+                        car.carName = "Kia stinger";
+                        car.AddToPrice(32990);
+                        car.Options(car);
+
+
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the Kia Cadenza.");
+                        car.carName = "Kia cadenza";
+                        car.AddToPrice(33100);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the Kia Niro.");
+                        car.carName = "Kia niro";
+                        car.AddToPrice(23490);
+                        car.Options(car);jdoodle
+
+
+                    }
+                }
+
+
+            }
+
+
+            else if (car.CarModel == "SUV")
+            {
+                {
+                    Console.WriteLine("For Kia Sportage press 1, for Kia Sorento press 2, for Kia Telluride  press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the Kia Sportage");
+                        car.carName = "Kia sportage";
+                        car.AddToPrice(23990);
+                        car.Options(car);
+
+
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the Kia Sorento.");
+                        car.carName = "Kia sorento";
+                        car.AddToPrice(26290);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the Kia Telluride.");
+                        car.carName = "Kia telluride";
+                        car.AddToPrice(31690);
+                        car.Options(car);
+
+
+                    }
+                }
+
+
+            }
+        }
+
+
+        /*
+            thid method displays the bmw prompt. it accepts a car object and calls the option method 
+        */
+        public static void BMWPrompt(Car car)
+        {
+            Console.WriteLine("You have selected BMW " + car.CarModel + "s");
+
+
+            if (car.CarModel == "Sedan")
+            {
+                Console.WriteLine("For BMW 3 series press 1, for BMW 5 series press 2, for BMW 7 series press 3");
+                string temp = Console.ReadLine();
+
+
+                if (temp == "1")
+                {
+                    Console.WriteLine("You have selected the BMW 3 series");
+                    car.carName = "BMW 3 series";
+                    car.AddToPrice(40250);
+                    car.Options(car);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    Console.WriteLine("You have selected the BMW 5 series.");
+                    car.carName = "BMW 5 series";
+                    car.AddToPrice(53400);
+                    car.Options(car);
+
+
+                }
+
+
+                else
+                {
+                    Console.WriteLine("You have selected the BMW 7 series.");
+                    car.carName = "BMW 7 series";
+                    car.AddToPrice(86450);
+                    car.Options(car);
+
+
+                }
+            }
+
+
+            else if (car.CarModel == "Sport car")
+            {
+                {
+                    Console.WriteLine("For BMW M3 press 1, for BMW Z4 press 2, for BMW M4  press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the BMW M3");
+                        car.carName = "BMW m3";
+                        car.AddToPrice(66500);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the BMW Z4.");
+                        car.carName = "BMW z4";
+                        car.AddToPrice(63700);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the BMW M4.");
+                        car.carName = "BMW m4";
+                        car.AddToPrice(69150);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+
+
+            else if (car.CarModel == "Coupe")
+            {
+                {
+                    Console.WriteLine("For BMW M4 series press 1, for BMW 2 series press 2, for BMW M850  press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the BMW M4 series");
+                        car.carName = "BMW m4 series";
+                        car.AddToPrice(44750);
+                        car.Options(car);
+
+
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the BMW 2 series.");
+                        car.carName = "BMW 2 series";
+                        car.AddToPrice(35300);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the BMW M850.");
+                        car.carName = "BMW m850";
+                        car.AddToPrice(111900);
+                        car.Options(car);
+
+
+                    }
+                }
+
+
+            }
+
+
+            else if (car.CarModel == "SUV")
+            {
+                {
+                    Console.WriteLine("For BMW X3 press 1, for BMW X4 press 2, for BMW X5  press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the BMW X3.");
+                        car.carName = "BMW x3";
+                        car.AddToPrice(41000);
+                        car.Options(car);
+
+
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the BMW X4.");
+                        car.carName = "BMW x4";
+                        car.AddToPrice(50450);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the BMW X5.");
+                        car.carName = "BMW x5";
+                        car.AddToPrice(60700);
+                        car.Options(car);
+
+
+                    }
+                }
+
+
+            }
+        }
+        /*
+            this method displays the mercedes prompt. it accepts a car object and calls the option method 
+        */
+        public static void MercedesPrompt(Car car)
+        {
+            Console.WriteLine("You have selected Mercedes " + car.CarModel + "s");
+
+
+            if (car.CarModel == "Sedan")
+            {
+                Console.WriteLine("For Mercedes C Class press 1, for Mercedes E Class press 2, for Mercedes S Class press 3");
+                string temp = Console.ReadLine();
+
+
+                if (temp == "1")
+                {
+                    Console.WriteLine("You have selected the Mercedes C Class");
+                    car.carName = "Mercedes C class";
+                    car.AddToPrice(41400);
+                    car.Options(car);
+
+
+                }
+
+
+                else if (temp == "2")
+                {
+                    Console.WriteLine("You have selected the Mercedes E Class.");
+                    car.carName = "Mercedes e class";
+                    car.AddToPrice(53500);
+                    car.Options(car);
+
+
+                }
+
+
+                else
+                {
+                    Console.WriteLine("You have selected the Mercedes S Class.");
+                    car.carName = "Mercedes s class";
+                    car.AddToPrice(91250);
+                    car.Options(car);
+
+
+                }
+            }
+
+
+            else if (car.CarModel == "Sport car")
+            {
+                {
+                    Console.WriteLine("For Mercedes GT Class press 1, for Mercedes SL Class press 2, for Mercedes CLS Class  press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the Mercedes GT Class");
+                        car.carName = "Mercedes gt class";
+                        car.AddToPrice(115900);
+                        car.Options(car);
+
+
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the Mercedes SL Class.");
+                        car.carName = "Mercedes sl class";
+                        car.AddToPrice(89150);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the Mercedes CLS Class.");
+                        car.carName = "Mercedes Cls class";
+                        car.AddToPrice(69200);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+
+
+            else if (car.CarModel == "Coupe")
+            {
+                {
+                    Console.WriteLine("For Mercedes C Class press 1, for Mercedes E Class press 2, for Mercedes GT press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the Mercedes C Class");
+                        car.carName = "Mercedes C class";
+                        car.AddToPrice(41400);
+                        car.Options(car);
+
+
+                    }
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the Mercedes E Class");
+                        car.carName = "Mercedes e class";
+                        car.AddToPrice(51000);
+                        car.Options(car);
+
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("You have selected the Mercedes GT Class");
+                        car.carName = "Mercedes gt class";
+                        car.AddToPrice(149900);
+                        car.Options(car);
+
+
+                    }
+                }
+
+
+            }
+
+
+            else if (car.CarModel == "SUV")
+            {
+                {
+                    Console.WriteLine("For Mercedes GLA press 1, for Mercedes GLC press 2, for Mercedes GLS press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1")
+                    {
+                        Console.WriteLine("You have selected the Mercedes GLA.");
+                        car.carName = "Mercedes gla";
+                        car.AddToPrice(33950);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else if (temp == "2")
+                    {
+                        Console.WriteLine("You have selected the Mercedes GLC.");
+                        car.carName = "Mercedes glc";
+                        car.AddToPrice(40700);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else
+                    {
+                        Console.WriteLine("You have selected the GLS.");
+                        car.carName = "Mercedes gls";
+                        car.AddToPrice(70150);
+                        car.Options(car);
+
+
+                    }
+                }
+
+
+            }
+        }
+
+
+        public static void FordPrompt(Car car) //after type of vehicle and ford brand are selected
+        {
+
+
+            Console.WriteLine("You have selected Ford " + car.CarModel + "s");
+
+
+            if (car.CarModel == "Sedan") //if sedan + Ford was selected
+            {
+                Console.WriteLine("For Ford Fiesta press 1, for Ford Focus press 2, for Ford Fusion press 3");
+                string temp = Console.ReadLine();
+
+
+                if (temp == "1") // option 1 sedan
+                {
+                    Console.WriteLine("You have selected the Ford Fiesta.");
+                    car.carName = "Ford fiesta";
+                    car.AddToPrice(14260);
+                    car.Options(car);
+
+
+
+
+                }
+
+
+                else if (temp == "2") // option 2 sedan
+                {
+                    Console.WriteLine("You have selected the Ford Focus.");
+                    car.carName = "Ford focus";
+                    car.AddToPrice(17950);
+                    car.Options(car);
+
+
+                }
+
+
+                else // option 3 sedan
+                {
+                    Console.WriteLine("You have selected the Ford Fusion.");
+                    car.carName = "Ford fusion";
+                    car.AddToPrice(22840);
+                    car.Options(car);
+
+
+                }
+            }
+            else if (car.CarModel == "Sports car")
+            {
+                {
+                    Console.WriteLine("For Ford Focus RS press 1, for Ford GT press 2:");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // option 1 sports car
+                    {
+                        Console.WriteLine("You have selected the Focus RS.");
+                        car.carName = "Ford focus rs";
+                        car.AddToPrice(36120);
+                        car.Options(car);
+
+
+                    }
+                    else // option 2 sports car
+                    {
+                        Console.WriteLine("You have selected the Ford GT.");
+                        car.carName = "Ford gt";
+                        car.AddToPrice(450000);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "Coupe")
+            {
+                {
+                    Console.WriteLine("For Ford Mustang press 1:");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // option 1 ford coupe
+                    {
+                        Console.WriteLine("You have selected the Ford Mustang.");
+                        car.carName = "Ford mustang";
+                        car.AddToPrice(26395);
+                        car.Options(car);
+
+
+                    }
+                    else  // option 2 ford coupe
+                    {
+                        Console.WriteLine("You have selected the Ford Mustang GT.");
+                        car.carName = "Ford mustang gt";
+                        car.AddToPrice(34989);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "SUV")
+            {
+                {
+                    Console.WriteLine("For Ford Escape press 1, for Ford Explorer press 2, for Ford Expedition press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") //option 1 ford suv
+                    {
+                        Console.WriteLine("You have selected the Ford Escape.");
+                        car.carName = "Ford escape";
+                        car.AddToPrice(24105);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else if (temp == "2") // option 2 ford suv
+                    {
+                        Console.WriteLine("You have selected the Focus Explorer.");
+                        car.carName = "Ford explorer";
+                        car.AddToPrice(36675);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else // option 3 ford suv
+                    {
+                        Console.WriteLine("You have selected the Ford Expedition.");
+                        car.carName = "Ford expedition";
+                        car.AddToPrice(52150);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "Truck") // if ford + truck are selected
+            {
+                {
+                    Console.WriteLine("For Ford F-150 press 1, for Ford F-250 press 2, for Ford F-350 press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // option 1 ford truck
+                    {
+                        Console.WriteLine("You have selected the Ford F-150.");
+                        car.carName = "Ford f-150";
+                        car.AddToPrice(28155);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else if (temp == "2") // option 2 ford truck
+                    {
+                        Console.WriteLine("You have selected the Focus F-250.");
+                        car.carName = "Ford f-250";
+                        car.AddToPrice(33150);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else // option 3 ford truck
+                    {
+                        Console.WriteLine("You have selected the Ford F-350.");
+                        car.carName = "Ford f-350";
+                        car.AddToPrice(34320);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+
+
+        }
+
+
+        public static void ChevyPrompt(Car car) // when chevy brand is selected
+        {
+            Console.WriteLine("You have selected Chevy " + car.CarModel + "s");
+
+
+            if (car.CarModel == "Sedan") // when chevy + sedan are selected
+            {
+                Console.WriteLine("For Cruze press 1, for Malibu press 2, for Impala press 3");
+                string temp = Console.ReadLine();
+
+
+                if (temp == "1") // chevy + sedan option 1
+                {
+                    Console.WriteLine("You have selected the Cruze");
+                    car.carName = "Chevy cruze";
+                    car.AddToPrice(17995);
+                    car.Options(car);
+
+
+                }
+
+
+                else if (temp == "2") // chevy + sedan option 2
+                {
+                    Console.WriteLine("You have selected the Malibu.");
+                    car.carName = "Chevy malibu";
+
+
+                    car.AddToPrice(22090);
+                    car.Options(car);
+
+
+                }
+
+
+                else  // chevy + sedan option 3
+                {
+                    Console.WriteLine("You have selected the Impala.");
+                    car.carName = "Chevy impala";
+                    car.AddToPrice(28020);
+                    car.Options(car);
+
+
+                }
+            }
+            else if (car.CarModel == "Sports car") // chevy + Sports car options
+            {
+                {
+                    Console.WriteLine("For Chevy SS press 1, for Corvette ZR1 press 2, for Camaro ZL1 press 3:");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // chevy + sports car option 1
+                    {
+                        Console.WriteLine("You have selected the Chevy SS.");
+                        car.carName = "Chevy ss";
+                        car.AddToPrice(49000);
+                        car.Options(car);
+
+
+                    }
+                    else if (temp == "2") // chevy + sports car option 2
+                    {
+                        Console.WriteLine("You have selected the Corvette ZR1.");
+                        car.carName = "Chevy corvette zr1";
+                        car.AddToPrice(59495);
+                        car.Options(car);
+
+
+                    }
+                    else // chevy + sports car option 3
+                    {
+                        Console.WriteLine("You have selected the Camaro ZL1.");
+                        car.carName = "Chevy camaro zl1";
+                        car.AddToPrice(62000);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "Coupe") // Chevy + coupe options
+            {
+                {
+                    Console.WriteLine("For Chevrolet Camaro press 1:");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // chevy + coupe option 1
+                    {
+                        Console.WriteLine("You have selected the Chevrolet Camaro.");
+                        car.carName = "Chevy camaro";
+                        car.AddToPrice(25000);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "SUV") // chevy + SUV options
+            {
+                {
+                    Console.WriteLine("For Chevy Tahoe press 1, for Chevy Traverse press 2, for Chevy Surburban press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // chevy + SUV option 1
+                    {
+                        Console.WriteLine("You have selected the Chevy Tahoe.");
+                        car.carName = "Chevy tahoe";
+                        car.AddToPrice(48000);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else if (temp == "2") // chevy + SUV option 2
+                    {
+                        Console.WriteLine("You have selected the Chevy Traverse.");
+                        car.carName = "Chevy traverse";
+                        car.AddToPrice(29930);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else  // chevy + SUV option 3
+                    {
+                        Console.WriteLine("You have selected the Chevy Surburban.");
+                        car.carName = "Chevy surburban";
+                        car.AddToPrice(50800);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "Truck")  //chevy + truck options
+            {
+                {
+                    Console.WriteLine("For Chevy 1500 press 1, for Chevy 2500 press 2, for Chevy 3500 press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") //Chevy + truck option 1
+                    {
+                        Console.WriteLine("You have selected the Chevy 1500.");
+                        car.carName = "Chevy 1500";
+                        car.AddToPrice(29795);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else if (temp == "2") //Chevy + truck option 2
+                    {
+                        Console.WriteLine("You have selected the Chevy 2500.");
+                        car.carName = "Chevy 2500";
+                        car.AddToPrice(35895);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else //Chevy + truck option 3
+                    {
+                        Console.WriteLine("You have selected the Chevy 3500.");
+                        car.carName = "Chevy 3500";
+                        car.AddToPrice(36000);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+        }
+
+
+        public static void DodgePrompt(Car car) //Dodge options
+        {
+            Console.WriteLine("You have selected Dodge " + car.CarModel + "s");
+
+
+            if (car.CarModel == "Sedan") // dodge + sedan options
+            {
+                Console.WriteLine("For Dodge Charger press 1, for Dodge Avenger press 2, for Dodge Dart press 3");
+                string temp = Console.ReadLine();
+
+
+                if (temp == "1") //dodge + sedans 1
+                {
+                    Console.WriteLine("You have selected the Dodge Charger");
+                    car.carName = "Dodge charger";
+                    car.AddToPrice(29220);
+                    car.Options(car);
+
+
+                }
+
+
+                else if (temp == "2") //dodge + sedans 2
+                {
+                    Console.WriteLine("You have selected the Dodge Avenger.");
+                    car.carName = "Dodge avenger";
+                    car.AddToPrice(25795);
+                    car.Options(car);
+
+
+                }
+
+
+                else //dodge + sedans 3
+                {
+                    Console.WriteLine("You have selected the Dodge Dart.");
+                    car.carName = "Dodge dart";
+                    car.AddToPrice(18395);
+                    car.Options(car);
+
+
+                }
+            }
+            else if (car.CarModel == "Sports car") //Dodge + sports car options 
+            {
+                {
+                    Console.WriteLine("For Dodge Hellcat Challenger press 1, for Dodge Hellcat Charger press 2, for SRT Viper press 3:");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // dodge + sports car option 1
+                    {
+                        Console.WriteLine("You have selected the Dodge Hellcat Challenger.");
+                        car.carName = "Dodge hellcat charger";
+                        car.AddToPrice(58995);
+                        car.Options(car);
+
+
+                    }
+                    else if (temp == "2")  // dodge + sports car option 2
+                    {
+                        Console.WriteLine("You have selected the Dodge Hellcat Charger.");
+                        car.carName = "Dodge hellcat charger";
+                        car.AddToPrice(65545);
+                        car.Options(car);
+
+
+                    }
+                    else  // dodge + sports car option 3
+                    {
+                        Console.WriteLine("You have selected the SRT Viper.");
+                        car.carName = "Dodge srt viper";
+                        car.AddToPrice(99800);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "Coupe") //dodge + coupe options
+            {
+                {
+                    Console.WriteLine("For Dodge Challenger press 1:");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") //dodge + coupe option 1
+                    {
+                        Console.WriteLine("You have selected the Dodge Challenger.");
+                        car.carName = "Dodge challanger";
+                        car.AddToPrice(27845);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "SUV") // dodge + SUV options
+            {
+                {
+                    Console.WriteLine("For Dodge Durango press 1, for Dodge Journey press 2:");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // dodge + suv option 1
+                    {
+                        Console.WriteLine("You have selected the Dodge Durango.");
+                        car.carName = "Dodge durango";
+                        car.AddToPrice(30195);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else // dodge + suv option 2
+                    {
+                        Console.WriteLine("You have selected the Dodge Journey.");
+                        car.carName = "Dodge journey";
+                        car.AddToPrice(22995);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+            else if (car.CarModel == "Truck") // dodge + truck options
+            {
+                {
+                    Console.WriteLine("For Dodge 1500 press 1, for Dodge 2500 press 2, for Dodge 3500 press 3");
+                    string temp = Console.ReadLine();
+
+
+                    if (temp == "1") // dodge + suv option 1
+                    {
+                        Console.WriteLine("You have selected the Dodge 1500.");
+                        car.carName = "Dodge 1500";
+                        car.AddToPrice(31795);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else if (temp == "2") // dodge + suv option 2
+                    {
+                        Console.WriteLine("You have selected the Dodge 2500.");
+                        car.carName = "Dodge 2500";
+                        car.AddToPrice(34000);
+                        car.Options(car);
+
+
+                    }
+
+
+                    else // dodge + suv option 3
+                    {
+
+
+                        Console.WriteLine("You have selected the Dodge 3500.");
+                        car.carName = "Dodge 3500";
+                        car.AddToPrice(36540);
+                        car.Options(car);
+
+
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+    class Car
+    {
+        public Car() { }
+
+
+        public Car(string carModel)
+        {
+            alloyWheels = false;
+            spoilers = false;
+            Tintedwindows = false;
+            premiumPackage = false;
+            conveniencePackage = false;
+            techPackage = false;
+            lightingPackage = false;
+            luxeryPackage = false;
+            carName = "default";
+            CarModel = carModel;
+            TotalPrice = 0;
+
+
+        }
+        public string carName { get; set; }
+        public bool alloyWheels { get; set; }
+        public bool spoilers { get; set; }
+        public bool Tintedwindows { get; set; }
+        public bool premiumPackage { get; set; }
+        public bool conveniencePackage { get; set; }
+
+
+        public bool techPackage { get; set; }
+        public bool lightingPackage { get; set; }
+
+
+        public bool luxeryPackage { get; set; }
+
+
+        public string CarModel { get; set; }
+        public double TotalPrice { get; set; }
+
+
+        /*
+            this is the options method it accpets a car object and displays a series of options
+            this method calls the print method
+        */
+        public void Options(Car car)
+        {
+            string temp;
+            bool flag = true;
+            Console.WriteLine("Would you like to add options? Enter Y for yes or N for no: ");
+            temp = Console.ReadLine();
+            if (temp == "y" || temp == "Y")
+            {
+                while (flag)
+                {
+                    Console.WriteLine("Press 1 to add a spoiler, 2 for tinted windows, 3 for alloy wheels, 4 for Premium Package, 5 for Convenience Package, 6 for Tech Package, 7 for Lighting Package, 8 for Luxury Package, 9 to exit the ADD FEATURES menu: ");
+                    temp = Console.ReadLine();
+                    int a = int.Parse(temp);
+
+
+
+
+                    switch (a)
+                    {
+                        case 1: //option to add a spoiler
+                            car.spoilers = true;
+                            AddToPrice(2000);
+                            break;
+                        case 2: //option to add tinted windows
+                            car.Tintedwindows = true;
+                            AddToPrice(1000);
+                            break;
+                        case 3: //option to add alloy wheels
+                            car.alloyWheels = true;
+                            AddToPrice(3000);
+                            break;
+                        case 4: //option to add premium package
+                            car.premiumPackage = true;
+                            AddToPrice(3000);
+                            break;
+                        case 5: //option to add convenience package
+                            car.conveniencePackage = true;
+                            AddToPrice(3000);
+                            break;
+                        case 6: //option to add tech package
+                            car.techPackage = true;
+                            AddToPrice(2000);
+                            break;
+                        case 7: //option to add lighting package
+                            car.lightingPackage = true;
+                            AddToPrice(1500);
+                            break;
+                        case 8: //option to add luxury package
+                            car.luxeryPackage = true;
+                            AddToPrice(3000);
+                            break;
+                        case 9: //exit switch statement, move to displaying output
+
+
+                            printOutput(car);
+                            flag = false;
+                            break;
+                        default:
+                            break;
+                    }
+
+
+
+
+                }
+
+
+            }
+
+
+            if (temp == "n" || temp == "N") //User has selected not to add any extra features
+            {
+                Console.WriteLine("No extra features have been added."); //Notify user that no features have been added.
+                Console.WriteLine(" ");
+                printOutput(car); //Display order output
+
+
+            }
+        }
+
+
+        /*
+            this is the print out put method it accpes a car object and prints out all of the
+            options to the console along with the total price
+        */
+        public void printOutput(Car car)
+        {
+            Console.WriteLine("-------REVIEW ORDER-------");
+            Console.WriteLine(car.carName); //display name of the car
+            Console.WriteLine("Car Type: " + CarModel); //display the type of the car
+            Console.WriteLine(" ");
+            Console.WriteLine("Added Features"); //indicate features will now be displayed
+            if (car.spoilers == true)
+            {
+                Console.WriteLine("Spoiler: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Spoiler: No"); //indicate this feature was not chosen
+            }
+
+
+            if (car.Tintedwindows == true)
+            {
+                Console.WriteLine("Tinted Windows: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Tinted Windows: No"); //indicate this feature was not chosen
+            }
+
+
+            if (car.alloyWheels == true)
+            {
+                Console.WriteLine("Alloy Wheels: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Alloy Wheels: No"); //indicate this feature was not chosen
+            }
+
+
+            if (car.premiumPackage == true)
+            {
+                Console.WriteLine("Premium Package: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Premium Package: No"); //indicate this feature was not chosen
+            }
+
+
+            if (car.conveniencePackage == true)
+            {
+                Console.WriteLine("Convenience Package: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Convenience Package: No"); //indicate this feature was not chosen
+            }
+            if (car.techPackage == true)
+            {
+                Console.WriteLine("Tech Package: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Tech Package: No"); //indicate this feature was not chosen
+            }
+            if (car.lightingPackage == true)
+            {
+                Console.WriteLine("Lighting Package: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Lighting Package: No"); //indicate this feature was not chosen
+            }
+            if (car.luxeryPackage == true)
+            {
+                Console.WriteLine("Luxury Package: Yes"); //indicate this feature was chosen
+            }
+            else
+            {
+                Console.WriteLine("Luxury Package: No"); //indicate this feature was not chosen
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("TOTAL PRICE: $" + TotalPrice); //display total price
+        }
+        // this is the add to price method it accepts a double and returns the total price of the
+        // car and options
+        public double AddToPrice(double currentBalance)
+        {
+            TotalPrice = TotalPrice + currentBalance;
+            Console.WriteLine("The price as configured is: $" + TotalPrice);
+            return TotalPrice;
+
+
+        }
+    }
+
+
+}
