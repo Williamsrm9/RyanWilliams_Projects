@@ -8,17 +8,26 @@ int main()
 int courseQuantity;
 int q;
 int courseCost[10];
+char courseName[10][150];
 int studentYear;
 int gradeProtection;
+int courseSubtotal;
 
 cout << "Please enter the number of courses that you would like to buy insurance for this semester:" << endl;
 cin >> courseQuantity;
 
-for(q = 1; q <= courseQuantity; q++){
+for(q = 0; q < courseQuantity; q++){
     
-    cout << "Enter the price for class #" << q << ": " << endl;
+    cout << "Enter the name of class #" << (q+1) << ": " << endl;
+    cin >> courseName[q];
+    
+    cout << "Enter the price for " << courseName[q] << ":" << endl;
     cout << "$";
-    cin >> courseCost[(q-1)];
+    cin >> courseCost[q];
+    
+    courseSubtotal += courseCost[q];
+    
+
 }
 
 cout << "What year of college are you in?" << endl;
@@ -57,6 +66,7 @@ switch(gradeProtection){
       default: cout << "This is not a valid selection. Please select a suitable option or exit." << endl;
 }
     
+
     
 
 }
