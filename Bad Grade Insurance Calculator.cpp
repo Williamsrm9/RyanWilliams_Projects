@@ -8,7 +8,6 @@ int main()
 int courseQuantity;
 int q;
 int courseCost[10];
-char courseName[10][150];
 int studentYear;
 double GPA;
 int gradeProtection;
@@ -24,16 +23,13 @@ cin >> courseQuantity;
 
 for(q = 0; q < courseQuantity; q++){
     
-    cout << "Enter the name of class #" << (q+1) << ": " << endl;
-    cin >> courseName[q];
-    
-    cout << "Enter the price for " << courseName[q] << ":" << endl;
+    cout << "Enter the price for class #" << q+1 << ":" << endl;
     cout << "$";
     cin >> courseCost[q];
     
     
     courseTotalSum += courseCost[q];
-    courseSubtotal = (0.50 * courseTotalSum);
+    courseSubtotal = (0.60 * courseTotalSum);
     
 
 }
@@ -164,9 +160,9 @@ cout << "REVIEW PURCHASE:" << endl;
 
 for(q = 0; q < courseQuantity; q++){
     
-    cout << courseName[q] << ": $" << courseCost[q] << endl;
+    cout << "Class #" << q+1 << ": $" << courseCost[q] << endl;
 }
-cout << "Total cost of classes you want to insure for this semester: $" << courseSubtotal << endl;
+cout << "Total cost of classes you want to insure for this semester: $" << courseTotalSum << endl;
 cout << "" << endl;
 cout << "Insurance plan covering the following courses at these prices costs: $" << protectionDeduction << endl; 
 
