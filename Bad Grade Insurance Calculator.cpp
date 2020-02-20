@@ -6,16 +6,20 @@ int main()
 {
 
 int courseQuantity;
-int q = 0;
+int q;
+int courseCost[10];
 
 cout << "Please enter the number of courses that you would like to buy insurance for this semester:" << endl;
 cin >> courseQuantity;
 
-for(q <= courseQuantity; q++) {
+for(q = 1; q <= courseQuantity; q++){
+    
     cout << "Enter the price for class #" << q << ": " << endl;
+    cin >> courseCost[(q-1)];
+    
     
 }
-
-cout << "For loop is now broken, proceed with code" << endl;
+    
+    
 
 }
