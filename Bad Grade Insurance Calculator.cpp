@@ -9,6 +9,7 @@ int courseQuantity;
 int q;
 int courseCost[10];
 int studentYear;
+int gradeProtection;
 
 cout << "Please enter the number of courses that you would like to buy insurance for this semester:" << endl;
 cin >> courseQuantity;
@@ -36,6 +37,23 @@ switch(studentYear){
       case 3: cout << "You have selected that you are in your third year of college (Junior)" << endl; break;
       case 4: cout << "You have selected that you are in your fourth year of college (Senior)" << endl; break;
       case 5: cout << "You have selected that you have been in college for more than four years" << endl; break;
+      default: cout << "This is not a valid selection. Please select a suitable option or exit." << endl;
+}
+
+cout << "Which grades would you like to buy protection for?" << endl;
+cout << "If you would like to purchase protection for Fs, press 1" << endl;
+cout << "If you would like to purchase protection for Fs and Ds, press 2" << endl;
+cout << "If you would like to purchase protection for Fs, Ds, and Cs, press 3" << endl;
+cout << "If you would to purchase protection for Fs, Ds, Cs, and Bs, press 4" << endl;
+
+cin >> gradeProtection;
+
+switch(gradeProtection){
+    
+      case 1: cout << "You have selected protection against Fs" << endl; break;
+      case 2: cout << "You have selected protection against Fs and Ds" << endl; break;
+      case 3: cout << "You have selected protection against Fs, Ds, and Cs" << endl; break;
+      case 4: cout << "You have selected protection against Fs, Ds, Cs, and Bs" << endl; break;
       default: cout << "This is not a valid selection. Please select a suitable option or exit." << endl;
 }
     
