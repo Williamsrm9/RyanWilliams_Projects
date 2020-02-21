@@ -137,7 +137,7 @@ else if(2.50 <= GPA < 2.75){
 
 else{
     
-    gpaDeduction = yearDeduction + (0.20 * yearDeduction);
+    gpaDeduction = yearDeduction + (0.25 * yearDeduction);
 }
 
 if(gradeProtection = 1){
