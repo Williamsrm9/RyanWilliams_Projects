@@ -18,7 +18,7 @@ double yearDeduction;
 double gpaDeduction;
 double protectionDeduction;
 
-cout <<"-------R. M. WILLIAMS CORPORATION BAD GRADE INSURANCE PLAN CALCULATOR-------" << endl;
+cout <<"-------R. M. WILLIAMS CORPORATION INSURANCE PLAN CALCULATOR-------" << endl;
 cout <<" " << endl;
 
 cout << "Please enter the number of courses that you would like to buy insurance for this semester:" << endl;
