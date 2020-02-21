@@ -18,6 +18,9 @@ double yearDeduction;
 double gpaDeduction;
 double protectionDeduction;
 
+cout <<"-------R. M. WILLIAMS CORPORATION BAD GRADE INSURANCE PLAN CALCULATOR-------" << endl;
+cout <<" " << endl;
+
 cout << "Please enter the number of courses that you would like to buy insurance for this semester:" << endl;
 cin >> courseQuantity;
 
@@ -27,13 +30,13 @@ for(q = 0; q < courseQuantity; q++){
     cout << "$";
     cin >> courseCost[q];
     
-    
     courseTotalSum += courseCost[q];
     courseSubtotal = (0.60 * courseTotalSum);
     
 
 }
 
+cout <<" " << endl;
 cout << "What year of college are you in?" << endl;
 cout << "If you are a freshman, press 1" << endl;
 cout << "If you are a sophomore, press 2" << endl;
@@ -54,6 +57,7 @@ switch(studentYear){
 }
 
 if(studentYear > 1){
+    cout <<" " << endl;
     cout << "Enter your current your current GPA (round to two decimal places):" << endl;
     cin >> GPA;
 }
@@ -63,7 +67,7 @@ else{
     GPA = 3.40;
 }
 
-
+cout <<" " << endl;
 cout << "Which grades would you like to buy protection for?" << endl;
 cout << "If you would like to purchase protection for Fs, press 1" << endl;
 cout << "If you would like to purchase protection for Fs and Ds, press 2" << endl;
@@ -156,6 +160,7 @@ else{
     protectionDeduction = gpaDeduction + (0.20 * gpaDeduction);
 }
 
+cout <<" " << endl;
 cout << "REVIEW PURCHASE:" << endl;
 
 for(q = 0; q < courseQuantity; q++){
